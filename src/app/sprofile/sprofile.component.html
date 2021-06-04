@@ -1,0 +1,34 @@
+<body>
+<div class="admin">Admin Status</div>
+    <!-- 1.navbar-->
+    <div class="nav">
+        <div class="logo">
+            <img src="../../assets/frames/pic2.JPG" width="35px" style="border-radius: 50%;"> KRISH 
+            <a class="link" (click)="userin()">USER</a> 
+            <a class="link" (click)="userin()">UPDATE</a> 
+            <a class="link" (click)="userin()">MANAGEMENT</a> 
+            <a class="link" (click)="userin()">PRIVACY</a> 
+        </div>
+
+        <div> 
+            <a class="but" [routerLink]="['/login']" (click)="logout()" >LOGOUT</a> 
+        </div>
+       
+    </div>
+
+    <!-- 2.Router Component -->
+    <div class="displaybox">
+        <!-- 2.1 side nav -->
+        <div class="sidenav" > 
+            <div class="snavlink" (click)="userin()">USER</div> 
+            <div class="snavlink" (click)="upin()">UPDATE</div> 
+            <div class="snavlink" (click)="manin()">MANAGEMENT</div> 
+            <div class="snavlink" (click)="userin()">PRIVACY</div> 
+        </div>
+        <div> <router-outlet></router-outlet></div>
+       
+    </div>
+   
+  
+</body>
+

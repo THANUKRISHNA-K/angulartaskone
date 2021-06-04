@@ -36,13 +36,13 @@ ngDoCheck(){
   {
  this.loginable=false;
  this.auth.setLoggedIn(true);
- this.isinput=true;
+//  this.isinput=true;
 
  }
  else
  {
    this.loginable=true;
-   this.isinput=false;
+  //  this.isinput=false;
  
  }
 }

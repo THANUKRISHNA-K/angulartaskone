@@ -1,0 +1,29 @@
+<div class="home">
+    <div class="box">
+        <div class="nav">
+            <div class="logo"><img src="../../assets/772630-removebg-preview.png" width="60px"></div>
+        </div>
+      <div class="content">
+            <div class="cpic"> <img src="../../assets/pngarea.com_artificial-intelligence-png-7138339.png" width="425px"> </div>
+            <div class="loginbox">
+                <br>
+                <h1>Sign-in</h1>
+                <br>
+                <form [formGroup]="formvalid">
+                <input  id="in" type="text" placeholder="Username" name="uname" [(ngModel)]="username" formControlName="uname"  [ngClass]="isinput?'green':'red' "><br>
+                <h5 class="text-danger"*ngIf="formvalid.controls['uname'].invalid&&formvalid.controls['uname'].touched">*Enter Username</h5><br>
+                <input id="in" type="password" placeholder="Password" name="pass" [(ngModel)]="password" formControlName="passw"  [ngClass]="isinput?'green':'red' " minlength="2" maxlength="10"><br>
+               
+                <h5 class="text-danger" *ngIf="formvalid.controls['passw'].invalid&&formvalid.controls['passw'].touched">*Enter Password</h5>
+                <input id="login" type="submit" value="login" (click)="login()" class="btn btn-success">
+                </form>
+               <div class="logintext"><h4>Login if you have an account<br>OR<br>Contact Admin</h4></div>
+            </div>
+           
+      </div>
+    </div>
+    </div>
+
+
+
+

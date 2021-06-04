@@ -7,12 +7,16 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   constructor() { }
+  
   private loggedinstatus=false;
- 
+  
   setLoggedIn(value:boolean){
     this.loggedinstatus=value;
   }
   get LoggedIn(){
-    return this.loggedinstatus;
+    return this.loggedinstatus; 
   }
+
+ 
+
 }

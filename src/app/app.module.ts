@@ -13,16 +13,30 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
-import {TestCanActivate,TestCanDeactivate} from './guards';
+import { TestCanActivate,TestCanDeactivate} from './guards';
+import { SuperCanActivate,SuperCanDeactivate} from './adguards'
 import { LogoutComponent } from './logout/logout.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SuperprofileComponent } from './superprofile/superprofile.component';
+import { SpchildComponent } from './spchild/spchild.component';
+import { NetloginComponent } from './netlogin/netlogin.component';
+import { SprofileComponent } from './sprofile/sprofile.component';
+
 const route:Routes=[
   {path:'', redirectTo:'home' ,pathMatch:'full'},
   {path:'routing', component:Routing1Component, children:[{path:'childrouting',component:Routing3Component}]},
   {path:'home',component:Routing2Component},
-  {path:'login',component:LoginComponent},
-  {path:'profile',component:ProfileComponent,canActivate:[TestCanActivate], canDeactivate: [TestCanDeactivate]},
-  {path:'logout',component:LogoutComponent},{path:'**',component:ErrorComponent},
+  // {path:'login',component:LoginComponent},
+  {path:'login',component:NetloginComponent},
+  
+  {path:'adminprofile',component:SprofileComponent,canActivate:[SuperCanActivate],canDeactivate: [SuperCanDeactivate],
+  children:[ {path:'', redirectTo:'userlist' ,pathMatch:'full'},
+  {path:'userlist',component:SpchildComponent},
+  {path:'update',component:Routing2Component},
+  {path:'management',component:Routing3Component}]},
+  {path:'profile',component:ProfileComponent,canActivate:[TestCanActivate],canDeactivate: [TestCanDeactivate]},
+  {path:'logout',component:LogoutComponent},
+  {path:'**',component:ErrorComponent},
   {path:'error',component:ErrorComponent}];
  
 @NgModule({
@@ -34,7 +48,11 @@ const route:Routes=[
     ErrorComponent,
     LoginComponent,
     ProfileComponent,
-    LogoutComponent
+    LogoutComponent,
+    SuperprofileComponent,
+    SpchildComponent,
+    NetloginComponent,
+    SprofileComponent
   ],
   imports: [
     BrowserModule,
