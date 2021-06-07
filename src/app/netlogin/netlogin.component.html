@@ -1,13 +1,15 @@
 <div class="home">
     <div class="box">
         <div class="nav">
-            <div class="logo"><img src="../../assets/772630-removebg-preview.png" width="60px"></div>
+            <div class="logo"><img src="../../assets/772630-removebg-preview.png" width="60px">&nbsp;<span style="color: rgb(141, 222, 247);">For Better <span style="color:rgb(255, 0, 98)">Com</span><span style="color:rgb(187, 255, 0)">munic</span><span style="color:rgb(0, 132, 255)">ation</span> Service</span></div> 
         </div>
+       
       <div class="content">
-            <div class="cpic"> <img src="../../assets/pngarea.com_artificial-intelligence-png-7138339.png" width="425px"> </div>
+   
             <div class="loginbox">
                 <br>
-                <h1>Sign-in</h1>
+                <div style="font-size: 35px; color:rgb(162, 231, 0)">WELCOME BACK! <h5 style="opacity: 0.5;">sign in to continue</h5></div>
+               
                 <br>
                 <form [formGroup]="formvalid">
                 <input  id="in" type="text" placeholder="Username" name="uname" [(ngModel)]="username" formControlName="uname"  [ngClass]="isinput?'green':'red' "><br>
@@ -17,8 +19,12 @@
                 <h5 class="text-danger" *ngIf="formvalid.controls['passw'].invalid&&formvalid.controls['passw'].touched">*Enter Password</h5>
                 <input id="login" type="submit" value="login" (click)="login()" class="btn btn-success">
                 </form>
-               <div class="logintext"><h4>Login if you have an account<br>OR<br>Contact Admin</h4></div>
+                <h4 style="color:rgb(162, 231, 0);opacity: 0.5;">Forgot password?</h4>
+               <div class="logintext"><h2>Register by</h2>
+                   <h1><i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i></h1></div>
             </div>
+            <div class="blur" ><div class="btext">we visualise a time when we will be to robots what dogs are to humans, and I’m rooting for the machine.</div></div>
+            <div class="cpic" > <img src="../../assets/workspace_inspiration_40stylizimo.jpg" width="467px"> </div>
            
       </div>
     </div>

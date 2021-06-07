@@ -6,7 +6,7 @@
 }
 .box{
     position:absolute;
-    background:linear-gradient(to bottom, white,rgb(189, 189, 189));
+    background:linear-gradient(35deg, rgb(0, 136, 91),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0,0,0));
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.7);
     margin-top: 40px;
@@ -19,7 +19,7 @@
     border-radius: 5px 5px 0px 0px;
     width: 100%;
     height:50px;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,16 +37,34 @@ margin-right: 25px;
 }
 .cpic{  
     margin-left: 75px;
-    margin-top: 75px;
+    margin-top: -50px;
+    
+}
+.blur{
+    content: '';
+    width: 300px;
+    height: 400px;
+    background-color: rgba(99, 99, 99, 0.8);
+    position: absolute;
+  margin-left: 1020px;
+  margin-top: 100px;
+  border-radius: 10px;
+  font-size: 30px;
+ 
+}
+.btext{
+width: 275px;
+height: 375px;
+margin: 40px 20px auto;
+color:rgb(47, 255, 238);
+opacity: 0.5;
 }
 .loginbox{
     background-color: transparent;
-    border: 2px solid rgb(0, 159, 165);
     width: 300px;
     height: 430px;
-    text-align: center;
     border-radius: 5px;
-    margin-right: 250px;
+    margin-left: 425px;
     margin-top: 100px;
    
 }
@@ -55,10 +73,12 @@ margin-right: 25px;
     justify-content: space-between;
 }
 #in{
-    border-radius: 15px;
+    border-radius: 5px;
+    height: 40px;
+    width: 225px;
     background-color: transparent;
     color: orange;
-    border: 2px solid rgb(0, 183, 255);
+    border: 2px solid rgb(62, 63, 63);
     outline: none;
 }
 #in.ng-touched.ng-invalid{
@@ -70,11 +90,16 @@ margin-right: 25px;
 input::placeholder{
     text-align: center;
 }
+i{
+    margin-left: 25px;
+}
 #login{
     margin-top: 20px;
+    width: 225px;
 }
 .logintext{
-    margin-top: 40px;
+    margin-top: 5px;
+    opacity: 0.8;
 }
 .green{
     border: 2px solid greenyellow;

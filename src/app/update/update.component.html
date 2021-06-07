@@ -1,0 +1,90 @@
+<div class="form">
+    <div class="formbox">
+ 
+    <form #login="ngForm" (ngSubmit)="user(login)">
+        <h1 style="color: rgb(74, 0, 158);">ENTER DETAILS</h1>
+      <div class="row g-3" id="firstin"> 
+        <div class="col-sm-4">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Firstname" name="firstname" ngModel #firstname="ngModel" required>
+          <small class="text-danger" *ngIf="firstname.touched && firstname.invalid">Enter Firstname</small>
+        </div>
+  
+        <div class="col-sm-4">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="lastname" name="lastname" ngModel #lastname="ngModel"  required>
+          <small class="text-danger" *ngIf="lastname.touched&&lastname.invalid" >Enter Lastname</small>
+        </div>
+  
+        <div class="col-sm-4">
+          <label for="femail" class="form-label">E-mail</label>
+          <input type="text" class="form-control" id="femail" placeholder="ex:abc@zzz.com" aria-describedby="emailHelp" email name="femail" ngModel #femail="ngModel" required>
+          <small class="text-danger" *ngIf="femail.touched&&femail.invalid">Enter a valid e-mail address </small>
+  
+        </div>
+        <div class="col-sm-12">
+          <label>Message</label>
+          <input type="text" class="form-control" placeholder="Leave a comment" ngModel name="message" #message="ngModel" minlength="4" maxlength="75" required >
+          <small *ngIf="message.touched&&message.invalid" class="text-danger">Leave a comment</small>
+        </div>
+       
+      </div>
+      <button  type="submit" class="btn btn-primary" [disabled]="login.invalid" >Register</button>
+    </form>
+  
+  
+    <form #secondlogin="ngForm" (ngSubmit)="secuser(secondlogin)">
+      <div class="row g-3" id="firstin">
+        <div class="col-sm-8">
+          <label for="secemail" class="form-label">Official E-mail</label>
+          <input type="text" class="form-control" id="secemail" placeholder="official_login@email.com" name="secmail" ngModel #secmail="ngModel" [ngClass]="{'is-invalid':secondlogin.submitted&&secmail.invalid}" required email>
+          <div class="invalid-feedback">
+            <small  >Enter E-mail address</small>
+          </div>
+        </div>
+  
+        <div class="col-sm-4">
+          <label for="username" class="form-label">User name</label>
+          <input type="text" class="form-control" id="userame" placeholder="username" name="username" ngModel #username="ngModel" [ngClass]="{'is-invalid':secondlogin.submitted && username.invalid}" required>
+          <small class="invalid-feedback">Enter User name</small>
+        </div>
+  
+        <div class="col-sm-6">
+          <label>Create password</label>
+          <input type="password" class="form-control" placeholder="Enter password" ngModel name="crepass" #crepass="ngModel" minlength="4" maxlength="8" required [ngClass]="{'is-invalid':secondlogin.submitted&&crepass.invalid}">
+         
+        </div>
+  
+  
+        <div class="col-sm-6">
+          <label>Re-enter password</label>
+          <input type="password" class="form-control" placeholder="Re-enter password" ngModel name="repass" #repass="ngModel" minlength="4" maxlength="8" required [ngClass]="{'is-invalid':secondlogin.submitted&&repass.invalid}">
+         
+        </div>
+  
+        <div class="col-sm-6">
+          <label class="control-label">Gender </label>
+          <div class="form-group" [class.has-error]="gender.touched&&gender.invalid">
+            <label class="radio-inline"><input type="radio" name="gender" value="male" ngModel #gender="ngModel" required > Male</label>
+            &nbsp;
+            <label class="radio-inline"><input type="radio" name="gender" value="female" ngModel #gender="ngModel" required> Female</label>
+          </div>
+          <small class="text-danger" *ngIf="gender.touched&&gender.invalid" >Gender is required</small>
+        </div>
+        <div class="col-sm-6">
+          <label for="terms" > Verification</label>
+          <div> <input type="checkbox" class="form-check-input" id="terms" name="terms" ngModel #terms="ngModel"  >
+            <label for="terms" > Verified</label>
+          </div>
+        
+  
+        </div>
+        
+  
+       
+      </div>
+  
+    </form>
+    <button type="submit" class="btn btn-success" >Submit</button>
+</div>
+</div>

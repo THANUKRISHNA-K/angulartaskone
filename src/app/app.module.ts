@@ -21,6 +21,8 @@ import { SuperprofileComponent } from './superprofile/superprofile.component';
 import { SpchildComponent } from './spchild/spchild.component';
 import { NetloginComponent } from './netlogin/netlogin.component';
 import { SprofileComponent } from './sprofile/sprofile.component';
+import { UpdateComponent } from './update/update.component';
+import { ManagementComponent } from './management/management.component';
 
 const route:Routes=[
   {path:'', redirectTo:'home' ,pathMatch:'full'},
@@ -32,8 +34,8 @@ const route:Routes=[
   {path:'adminprofile',component:SprofileComponent,canActivate:[SuperCanActivate],canDeactivate: [SuperCanDeactivate],
   children:[ {path:'', redirectTo:'userlist' ,pathMatch:'full'},
   {path:'userlist',component:SpchildComponent},
-  {path:'update',component:Routing2Component},
-  {path:'management',component:Routing3Component}]},
+  {path:'update',component:UpdateComponent},
+  {path:'management',component:ManagementComponent}]},
   {path:'profile',component:ProfileComponent,canActivate:[TestCanActivate],canDeactivate: [TestCanDeactivate]},
   {path:'logout',component:LogoutComponent},
   {path:'**',component:ErrorComponent},
@@ -52,7 +54,9 @@ const route:Routes=[
     SuperprofileComponent,
     SpchildComponent,
     NetloginComponent,
-    SprofileComponent
+    SprofileComponent,
+    UpdateComponent,
+    ManagementComponent
   ],
   imports: [
     BrowserModule,

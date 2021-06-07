@@ -4,10 +4,10 @@
     <div class="nav">
         <div class="logo">
             <img src="../../assets/frames/pic2.JPG" width="35px" style="border-radius: 50%;"> KRISH 
-            <a class="link" (click)="userin()">USER</a> 
-            <a class="link" (click)="userin()">UPDATE</a> 
-            <a class="link" (click)="userin()">MANAGEMENT</a> 
-            <a class="link" (click)="userin()">PRIVACY</a> 
+            <a class="link" style="color: rgb(255, 4, 121);" (click)="userin()">USER</a> 
+            <a class="link" style="color: rgb(255, 146, 4);" (click)="upin()">UPDATE</a> 
+            <a class="link" style="color: rgb(4, 255, 222);" (click)="manin()">MANAGEMENT</a> 
+            <a class="link" style="color: rgb(104, 255, 4);" (click)="userin()">PRIVACY</a> 
         </div>
 
         <div> 
@@ -20,10 +20,16 @@
     <div class="displaybox">
         <!-- 2.1 side nav -->
         <div class="sidenav" > 
-            <div class="snavlink" (click)="userin()">USER</div> 
-            <div class="snavlink" (click)="upin()">UPDATE</div> 
-            <div class="snavlink" (click)="manin()">MANAGEMENT</div> 
-            <div class="snavlink" (click)="userin()">PRIVACY</div> 
+            <div class="snavbox">
+            <h1>Welcome back!<h4>Access user account</h4> </h1> 
+          <input class="form-control" type="text" placeholder="username"  ><br>
+          <input class="form-control" type="text" placeholder="password"  > <br>
+          <button class="snavbut"> Login</button>
+           </div>
+           <div class="copyright">
+               &copy; All rights are reserved<br>
+               Krish__official
+           </div>
         </div>
         <div> <router-outlet></router-outlet></div>
        

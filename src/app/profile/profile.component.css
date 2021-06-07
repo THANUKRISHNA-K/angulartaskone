@@ -1,6 +1,7 @@
 .box{
     position:absolute;
     background:linear-gradient(to bottom, white,rgb(189, 189, 189));
+    color: rgb(255, 94, 0);
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
     margin-top: 40px;
